@@ -1,0 +1,204 @@
+@media(max-width:1024px){
+    .hader-top ul li {
+        padding: 10px 10px;
+    }
+    h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:992px){
+    .mobileversonot {
+        display: none;
+    }
+    .mobile-view {
+        display: block !important;
+    }
+    .hader-top ul li span {
+        font-size: 15px;
+        display: none;
+    }
+    .hader-top ul li {
+        padding: 10px 25px;
+    }
+    #registration{
+        padding: 10px;
+      }
+    p {
+        font-size: 14px;
+        line-height: 1.9;
+        color: #000000;
+        text-align: justify;
+    }
+    h2.headering-color {
+        margin-bottom: 20px;
+    }
+    .video h2 {
+        margin-bottom: 30px;
+    }
+    .abedoner_text h2 {
+        text-shadow: 3px 2px 4px blueviolet;
+        margin-bottom: 35px !important;
+    }
+    .bresponsive {
+        margin-top: 35px;
+    }
+    .card {
+        margin: 10px 0px;
+    }
+    .bgg {
+        border-radius: 10px;
+    }
+    .kri-text {
+        margin-bottom: 20px;
+    }
+    .navbar-mobile ul {
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 0;
+        border-radius: 8px;
+        background-color: #522972;
+        overflow-y: auto;
+        transition: 0.25s linear;
+    }
+    .navbar-mobile a, .navbar-mobile a:focus {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #ffffff;
+    }
+    .navbar-mobile .dropdown ul {
+        position: static;
+        display: none;
+        margin: 10px 20px;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 1;
+        visibility: visible;
+        background: #522972;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+}
+#header.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+@media(max-width:540px){
+    .mobile-view ul li a {
+        color: #fff;
+        padding-bottom: 26px;
+        padding-top: 9px;
+        padding-left: 6px;
+        padding-right: 6px;
+        display: inline;
+        position: relative;
+        top: 9px;
+    }
+    .hader-top ul li {
+        padding: 10px 17px;
+    }
+    .hader-top ul li strong {
+        font-size: 22px;
+    }
+    .hader-top ul li {
+        padding: 10px 0px;
+    }
+    .hader-top ul li:first-child:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        border: 28px solid #522972;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+    }
+}
+@media(max-width:414px){
+    .hader-top ul li {
+        padding: 10px 5px;
+    }
+    .hader-top ul li strong {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:412px){
+    .hader-top ul li {
+        padding: 10px 5px;
+    }
+    .hader-top ul li strong {
+        font-size: 22px;
+    }
+}
+@media(max-width:390px){
+    .hader-top ul li {
+        padding: 10px 5px;
+    }
+}
+@media(max-width:375px){
+    .hader-top ul li {
+        padding: 10px 5px;
+    }
+    .hader-top ul li strong {
+        font-size: 20px;
+    }
+    .hader-top ul li:first-child:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        border: 27px solid #522972;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+    }
+}
+@media(max-width:360px){
+    .hader-top ul li {
+        padding: 10px 5px;
+    }
+}
+
+
+@media(max-width:280px){
+    .hader-top ul li {
+        padding: 10px 0px;
+    }
+    .hader-top ul li strong {
+        font-size: 20px;
+    }
+    .hader-top ul li:first-child:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        border: 26px solid #522972;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        -webkit-transition: 500ms;
+        transition: 500ms;
+    }
+    .mobile-view ul li a {
+        color: #fff;
+        padding-bottom: 26px;
+        padding-top: 9px;
+        padding-left: 3px;
+        padding-right: 3px;
+        display: inline;
+        position: relative;
+        top: 9px;
+    }
+}
