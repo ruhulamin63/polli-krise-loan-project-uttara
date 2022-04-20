@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,9 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('login', [AuthController::class, 'index'])->name('login');
 // Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
@@ -31,3 +33,13 @@ Route::post('post-login', [LoginController::class, 'postLogin'])->name('login.po
 
 Route::get('registration', [LoginController::class, 'registration'])->name('register');
 Route::post('post-registration', [LoginController::class, 'postRegistration'])->name('register.post'); 
+
+
+Route::get('', [CustomerController::class, 'index'])->name('customer.home'); 
+Route::get('bank-manual', [CustomerController::class, 'bank_manual'])->name('customer.bank.manual'); 
+Route::get('lead-bank-manual', [CustomerController::class, 'lead_bank_manual'])->name('customer.lead.bank.manual'); 
+Route::get('upazila-manual', [CustomerController::class, 'upazila_manual'])->name('customer.upazila.manual'); 
+Route::get('install-element', [CustomerController::class, 'inatall_element'])->name('customer.install.element'); 
+Route::get('farmar-manual', [CustomerController::class, 'farmar_manual'])->name('customer.farmar.manual'); 
+Route::get('administarative-manual', [CustomerController::class, 'administrative_manual'])->name('customer.administrative.manual'); 
+ 
