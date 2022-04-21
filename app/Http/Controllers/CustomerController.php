@@ -36,10 +36,14 @@ class CustomerController extends Controller
         return view('customer.farmar-manual');
     }
 
-   
-
     public function administrative_manual(){
 
         return view('customer.administrative-manual');
+    }
+
+    //===================Customer Dashboard========================
+
+    public function customer_dashboard(){
+        return view('customer.dashboard.customerDashboard');
     }
 }
