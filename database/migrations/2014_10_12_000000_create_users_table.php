@@ -31,6 +31,12 @@ class CreateUsersTable extends Migration
             $table->integer('dob_month')->nullable();
             $table->integer('dob_year')->nullable();
             $table->string('nid', 255)->nullable();
+
+            $table->integer('user_type')->nullable()->comment = '1.admin 2.customer';
+            $table->integer('activeStatus')->nullable();
+            
+            $table->integer('info_verify')->nullable()->comment = '0.in_active 1.active';
+            $table->integer('loan_verify')->nullable()->comment = '0.in_active 1.active';
             
             $table->timestamp('otp_verified_at')->nullable();
             $table->rememberToken();

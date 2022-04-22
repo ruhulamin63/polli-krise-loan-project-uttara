@@ -7,6 +7,8 @@
 
     <title><?=$title?></title>
 
+    <link rel="shortcut icon" href="{{asset('media/fabric icon/car-service.png')}}" />
+
     <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet"> 
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <!-- Bootstrap CSS v5.0.2 -->
@@ -26,11 +28,11 @@
                 <div class="col-lg-12 col-md-12 clearfix">
                     <div class="hader-top">
                         <ul>
-                            <li><strong>১০৯২</strong><span>ঋণ আবেদন</span></li>
-                            <li><strong>৯৩৩</strong><span>যাচাইকৃত ঋণ</span></li>
-                            <li><strong>৯২৮</strong><span>অনুমোদিত ঋণ</span></li>
-                            <li><strong>৮৮৫</strong><span>বিতরনকৃত ঋণ</span></li>
-                            <li><strong> ৮৪৯২</strong><span>নিবন্ধিত মোট কৃষক</span></li>
+                            <li><strong>১০৯২</strong><span style="margin-left: 10px;">ঋণ আবেদন</span></li>
+                            <li><strong>৯৩৩</strong><span style="margin-left: 10px;">যাচাইকৃত ঋণ</span></li>
+                            <li><strong>৯২৮</strong><span style="margin-left: 10px;">অনুমোদিত ঋণ</span></li>
+                            <li><strong>৮৮৫</strong><span style="margin-left: 10px;">বিতরনকৃত ঋণ</span></li>
+                            <li><strong> ৮৪৯২</strong><span style="margin-left: 10px;">নিবন্ধিত মোট কৃষক</span></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +77,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">হোম</a>
+            <a class="nav-link active" aria-current="page" href="{{route('customer.home')}}">হোম</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">আবেদনের অগ্রগতি</a>
@@ -85,29 +87,29 @@
               ইউজার ম্যানুয়্যাল
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="administrative-mannual.html">প্রশাসনিক কর্মকর্তাদের জন্য</a></li>
-              <li><a class="dropdown-item" href="upzilla-mannual.html">উপজেলা কৃষি, মৎ্স,প্রাণী সম্পদ কর্মকর্তাদের জন্য</a></li>
-              <li><a class="dropdown-item" href="bank-mannual.html">ব্যাংক ব্যবহারের জন্য</a></li>
-              <li><a class="dropdown-item" href="lead-bank-mannual.html">লীড ব্যাংকের জন্য</a></li>
-              <li><a class="dropdown-item" href="farmer-mannual.html">কৃষকের জন্য</a></li>
+              <li><a class="dropdown-item" href="{{route('customer.administrative.manual')}}">প্রশাসনিক কর্মকর্তাদের জন্য</a></li>
+              <li><a class="dropdown-item" href="{{route('customer.upazila.manual')}}">উপজেলা কৃষি, মৎ্স,প্রাণী সম্পদ কর্মকর্তাদের জন্য</a></li>
+              <li><a class="dropdown-item" href="{{route('customer.bank.manual')}}">ব্যাংক ব্যবহারের জন্য</a></li>
+              <li><a class="dropdown-item" href="{{route('customer.lead.bank.manual')}}">লীড ব্যাংকের জন্য</a></li>
+              <li><a class="dropdown-item" href="{{route('customer.farmar.manual')}}">কৃষকের জন্য</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active mobileversonot" aria-current="page" href="installment.html">কি‌স্তি প‌রি‌শোধ করুন</a>
+            <a class="nav-link active mobileversonot" aria-current="page" href="{{route('customer.install.element')}}">কি‌স্তি প‌রি‌শোধ করুন</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mobileversonot" aria-current="page" href="registration.html">নিবন্ধন</a>
+            <a class="nav-link mobileversonot" aria-current="page" href="{{route('register')}}">নিবন্ধন</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mobileversonot" aria-current="page" href="login.html">লগইন</a>
+            <a class="nav-link mobileversonot" aria-current="page" href="{{route('login')}}">লগইন</a>
           </li>
         </ul>
       </div>
       <div class="mobile-view">
         <ul>
-          <li><a href="installment.html">কি‌স্তি প‌রি‌শোধ করুন</a></li>
-          <li><a href="registration.html">নিবন্ধন</a></li>
-          <li><a href="login.html">লগইন</a></li>
+          <li><a href="{{route('customer.install.element')}}">কি‌স্তি প‌রি‌শোধ করুন</a></li>
+          <li><a href="{{route('register')}}">নিবন্ধন</a></li>
+          <li><a href="{{route('login')}}">লগইন</a></li>
         </ul>
       </div>
     </div>
