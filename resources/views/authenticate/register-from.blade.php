@@ -53,11 +53,11 @@
                      <div class="input-groupp">
                         <label for="panelist_day_of_birth" class="d-block text-start date-of">জন্ম তারিখ</label>
                         <div class="input-group2 d-flex">
-                          <input class="date_of_dirthinput" required="" id="panelist_day_of_birth " name="day_of_birth" type="number" min="1" max="31" maxlength="2" placeholder="১১" autocomplete="bday-day"  class="form-control  form-control-gray " value="">
+                          <input class="date_of_dirthinput" required="" id="panelist_day_of_birth " name="dob_day" type="number" min="1" max="31" maxlength="2" placeholder="১১" autocomplete="bday-day"  class="form-control  form-control-gray " value="">
                           <!-- DD -->
-                          <input class="date_of_dirthinput" required="" id="panelist_month_of_birth" name="month_of_birth" type="number" min="1" max="12" maxlength="2" placeholder="০১" autocomplete="bday-month"  class="form-control  form-control-gray " value="">
+                          <input class="date_of_dirthinput" required="" id="panelist_month_of_birth" name="dob_month" type="number" min="1" max="12" maxlength="2" placeholder="০১" autocomplete="bday-month"  class="form-control  form-control-gray " value="">
                           <!-- MM -->
-                          <input class="date_of_dirthinput" required="" id="panelist_year_of_birth" name="year_of_birth" type="number" min="1922" max="2009" maxlength="4" minlength="4" placeholder="১৯৮০" autocomplete="bday-year"class="form-control  form-control-gray " value="">
+                          <input class="date_of_dirthinput" required="" id="panelist_year_of_birth" name="dob_year" type="number" min="1922" max="2009" maxlength="4" minlength="4" placeholder="১৯৮০" autocomplete="bday-year"class="form-control  form-control-gray " value="">
                         </div>
                       </div>
 

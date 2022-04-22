@@ -22,7 +22,7 @@ class SessionVerify
         else{
             $request->session()->flash('message', 'Invalid Request!');
 
-                return redirect('/login')
+                return redirect()->route('login')
                 ->with([
                     'error' => true,
                     'message' => 'Please login first'

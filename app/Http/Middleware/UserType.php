@@ -20,7 +20,7 @@ class UserType
             return $next($request);
         }else{
             $request->session()->flash('message', 'Invalid Request');
-            return redirect('/login')->with([
+            return redirect()->route('login')->with([
                 'error' => true,
                 'message' => 'Please login first!'
             ]);

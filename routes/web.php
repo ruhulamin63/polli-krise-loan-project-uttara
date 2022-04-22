@@ -28,14 +28,19 @@ use App\Http\Controllers\CustomerController;
     // Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
-    Route::get('login', [LoginController::class, 'login_index'])->name('login');
-    Route::post('post-login', [LoginController::class, 'postLogin'])->name('login.post'); 
-
     Route::get('registration', [LoginController::class, 'registration'])->name('register');
     Route::post('post-registration', [LoginController::class, 'postRegistration'])->name('register.post'); 
 
+    Route::get('login', [LoginController::class, 'login_index'])->name('login');
+    Route::post('post-login', [LoginController::class, 'postLogin'])->name('login.post'); 
 
-    Route::get('/', [CustomerController::class, 'index'])->name('customer.home'); 
+    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+    Route::get('/', [CustomerController::class, 'index'])->name('customer.home');
+    Route::post('calculation', [CustomerController::class, 'post_index'])->name('customer.post');
+
     Route::get('bank-manual', [CustomerController::class, 'bank_manual'])->name('customer.bank.manual'); 
     Route::get('lead-bank-manual', [CustomerController::class, 'lead_bank_manual'])->name('customer.lead.bank.manual'); 
     Route::get('upazila-manual', [CustomerController::class, 'upazila_manual'])->name('customer.upazila.manual'); 

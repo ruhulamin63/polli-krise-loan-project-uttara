@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class CustomerController extends Controller
 {
@@ -10,6 +13,22 @@ class CustomerController extends Controller
 
         return view('customer.index');
     }
+
+    public function post_index(Request $request){
+
+        $i = ($request->principle)*($request->interest)/100*($request->month / 12);
+        $total = $request->principle + $i;
+        //dd($total);
+
+        $result = $total/($request->month);
+
+        return redirect()
+        ->back()
+        ->with([
+            'result' => $result,
+        ]);
+    }
+
 
     public function bank_manual(){
 
