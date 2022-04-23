@@ -82,22 +82,20 @@
             </div>
               <div class="abedoner_text calculator  bgg">
                 <div class="main-calculator">
-                  {{-- <form action="{{route('customer.post')}}" method="post">
-                    @csrf --}}
-
-                    @include('layout.scripts.calculate-interest-script')
+                  {{-- <form id="myForm"> --}}
+                    {{-- @csrf --}}
 
                     <div class="input-group1">
                       <label for="#">আপনার কত টাকা প্রয়োজন?</label>
                       <div class="input-group align-items-center">
-                       <input class="form-control" type="number" name="principle"  id="inputEmail3" placeholder="Loan Amount" maxlength="8" name="txtloanamt">
+                       <input class="form-control" type="number" name="principle"  id="loan_amount" placeholder="Loan Amount" maxlength="8">
                        <label class="control-label text-left">টাকা</label>
                       </div>
                     </div>
                    <div class="input-group1">
                     <label for="#">কয় মাসে পরিশোধ করতে চান?</label>
                     <div class="input-group align-items-center">
-                     <input class="form-control"  type="number" name="month"  id="inputPassword3" placeholder="Month" maxlength="3" name="txttenor">
+                     <input class="form-control"  type="number" name="month"  id="loan_month" placeholder="Month" maxlength="3" name="txttenor">
                      <label class="control-label text-left">মাস</label>
                     </div>
                    </div>
@@ -105,30 +103,32 @@
                    <div class="input-group1">
                     <label for="#">সুদের হার</label>
                     <div class="input-group align-items-center">
-                      <input class="form-control"  type="number" name="interest" id="inputPassword3" placeholder="Interest Rate" maxlength="4" name="txtIR">
+                      <input class="form-control"  type="number" name="interest" id="loan_interest" placeholder="Interest Rate" maxlength="4" name="txtIR">
                       <label class="control-label text-left">%</label>
                      </div>
                    </div>
                   
                    <div class="input-group align-items-center mb-4 mt-4">
                       <button type="submit" id="interest-calculate" name="btncalc" class="btn btn-primary">ক্যালকুলেশন</button>
-                      <button type="reset" class="btn btn-danger">রিসেট</button>
+                      <button type="reset" onClick = "fun()" class="btn btn-danger">রিসেট</button>
                    </div>
                     
+                    <div class="input-group1">
+                      <label for="#">মাসিক কিস্তির পরিমাণ</label>
+                      <div class="input-group align-items-center">
+                        <input class="form-control"  type="number"  id="monthly_pay" placeholder="EMI Aamount" value="">
+                        <label class="control-label text-left">টাকা</label>
+                      </div>
+                    </div>
                   {{-- </form> --}}
-                  <div class="input-group1">
-                    <label for="#">মাসিক কিস্তির পরিমাণ</label>
-                    <div class="input-group align-items-center">
-                      <input class="form-control"  type="number"  id="inputPassword3" placeholder="EMI Aamount" value="">
-                      <label class="control-label text-left">টাকা</label>
-                     </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      @include('layout.interest.calculate-interest')
 
   <!-- কৃষিঋণ আবেদনের নিয়মাবলী End-->
       <!-- কৃষকের আবেদনের অগ্রগতি -->
