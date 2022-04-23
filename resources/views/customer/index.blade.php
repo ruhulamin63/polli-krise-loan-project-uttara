@@ -82,9 +82,11 @@
             </div>
               <div class="abedoner_text calculator  bgg">
                 <div class="main-calculator">
-                  <form action="{{route('customer.post')}}" method="post">
-                    @csrf
-                  
+                  {{-- <form action="{{route('customer.post')}}" method="post">
+                    @csrf --}}
+
+                    @include('layout.scripts.calculate-interest-script')
+
                     <div class="input-group1">
                       <label for="#">আপনার কত টাকা প্রয়োজন?</label>
                       <div class="input-group align-items-center">
@@ -109,11 +111,11 @@
                    </div>
                   
                    <div class="input-group align-items-center mb-4 mt-4">
-                    <button type="submit" name="btncalc" class="btn btn-primary">ক্যালকুলেশন</button>
-                    <button type="reset" class="btn btn-danger">রিসেট</button>
+                      <button type="submit" id="interest-calculate" name="btncalc" class="btn btn-primary">ক্যালকুলেশন</button>
+                      <button type="reset" class="btn btn-danger">রিসেট</button>
                    </div>
                     
-                  </form>
+                  {{-- </form> --}}
                   <div class="input-group1">
                     <label for="#">মাসিক কিস্তির পরিমাণ</label>
                     <div class="input-group align-items-center">

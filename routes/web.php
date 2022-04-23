@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,20 +39,20 @@ use App\Http\Controllers\CustomerController;
 
 
 
-    Route::get('/', [CustomerController::class, 'index'])->name('customer.home');
-    Route::post('calculation', [CustomerController::class, 'post_index'])->name('customer.post');
+    Route::get('/', [IndexController::class, 'index'])->name('customer.home');
+    // Route::post('calculation', [IndexController::class, 'post_interest'])->name('customer.post');
 
-    Route::get('bank-manual', [CustomerController::class, 'bank_manual'])->name('customer.bank.manual'); 
-    Route::get('lead-bank-manual', [CustomerController::class, 'lead_bank_manual'])->name('customer.lead.bank.manual'); 
-    Route::get('upazila-manual', [CustomerController::class, 'upazila_manual'])->name('customer.upazila.manual'); 
-    Route::get('install-element', [CustomerController::class, 'inatall_element'])->name('customer.install.element'); 
-    Route::get('farmar-manual', [CustomerController::class, 'farmar_manual'])->name('customer.farmar.manual'); 
-    Route::get('administarative-manual', [CustomerController::class, 'administrative_manual'])->name('customer.administrative.manual'); 
+    Route::get('bank-manual', [IndexController::class, 'bank_manual'])->name('customer.bank.manual'); 
+    Route::get('lead-bank-manual', [IndexController::class, 'lead_bank_manual'])->name('customer.lead.bank.manual'); 
+    Route::get('upazila-manual', [IndexController::class, 'upazila_manual'])->name('customer.upazila.manual'); 
+    Route::get('install-element', [IndexController::class, 'inatall_element'])->name('customer.install.element'); 
+    Route::get('farmar-manual', [IndexController::class, 'farmar_manual'])->name('customer.farmar.manual'); 
+    Route::get('administarative-manual', [IndexController::class, 'administrative_manual'])->name('customer.administrative.manual'); 
     
 
 Route::group(['middleware'=>['sessionVerify']] , function(){
     Route::group(['middleware'=>['userType']] , function(){
-
+        //dd('test');
         Route::get('customer-dashboard', [CustomerController::class, 'customer_dashboard'])->name('customer.dashboard');
 
     });

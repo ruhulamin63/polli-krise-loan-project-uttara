@@ -17,8 +17,8 @@ class LoginSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Ruhul Amin',
-            'father_name' => 'Daud Hossin',
-            'mother_name' => 'Asma Begum',
+            'father_name' => 'test',
+            'mother_name' => 'test',
             'address' => 'Kutial',
             'contact_number' => '01743369163',
             'password' => Hash::make('user'),
@@ -32,6 +32,7 @@ class LoginSeeder extends Seeder
             'user_type' => 2,
             'info_verify' => 0,
             'loan_verify' => 0,
+            'delivery_loan' => 0,
             'activeStatus' => 1,
             'created_at' => now(),
             'updated_at' => now()
@@ -39,8 +40,8 @@ class LoginSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Hridoy Khan',
-            'father_name' => 'Korim Hossin',
-            'mother_name' => 'Joshe Begum',
+            'father_name' => 'test',
+            'mother_name' => 'test',
             'address' => 'Dhaka',
             'contact_number' => '01689385783',
             'password' => Hash::make('admin'),
@@ -54,6 +55,7 @@ class LoginSeeder extends Seeder
             'user_type' => 1,
             'info_verify' => 0,
             'loan_verify' => 0,
+            'delivery_loan' => 0,
             'activeStatus' => 1,
             'created_at' => now(),
             'updated_at' => now()

@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Session;
 
 class SessionVerify
 {
@@ -16,7 +17,7 @@ class SessionVerify
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->has('user_type')){
+        if($request->session()->has('type')){
             return $next($request);
         }
         else{
