@@ -14,21 +14,50 @@ use Intervention\Image\Facades\Image;
 use \Crypt;
 use PDF;
 
+use App\Models\User;
 
 class LoginController extends Controller
 {
     //===============================view signin page========================
     public function login_index(Request $request) {
+        $all_apply_count = User::where('user_type', 2)
+        ->where('activeStatus',1)
+        ->count('id');
+
+        $info_verify = User::where('info_verify', 1)
+            ->where('user_type',2)
+            ->where('activeStatus',1)
+            ->count('id');
+
+        $loan_verify = User::where('loan_verify', 1)
+            ->where('user_type',2)
+            ->where('activeStatus',1)
+            ->count('id');
+
+        $delivery_loan = User::where('delivery_loan',1)
+            ->where('user_type',2)
+            ->where('activeStatus',1)
+            ->count('id');
+
+        $total_delivery_loan = User::where('info_verify', 1)
+                    ->where('loan_verify', 1)
+                    ->where('delivery_loan',1)
+                    ->where('user_type',2)
+                    ->where('activeStatus',1)
+                    ->count('id');
+
+        //=========================================================
+
         if($request->session()->has('user_contact_number')){
-            if($request->session()->get('user_type') == 1){
+            if($request->session()->get('type') == 1){
                 return redirect()->route('admin.dashboard');
-            }elseif($request->session()->get('user_type') == 2){
+            }else if($request->session()->get('type') == 2){
                 return redirect()->route('customer.dashboard');
             }else{
-                return view('authenticate.login-from');
+                return view('authenticate.login-from', compact('all_apply_count', 'info_verify', 'loan_verify', 'delivery_loan', 'total_delivery_loan'));
             }
         }else{
-            return view('authenticate.login-from');
+            return view('authenticate.login-from', compact('all_apply_count', 'info_verify', 'loan_verify', 'delivery_loan', 'total_delivery_loan'));
         }
     }
 
@@ -58,12 +87,12 @@ class LoginController extends Controller
                 $request->session()->put('user_name', $user->name);
                 $request->session()->put('user_father_name', $user->father_name);
                 $request->session()->put('user_mother_name', $user->mother_name);
-                $request->session()->put('user_type', $user->user_type);
+                $request->session()->put('type', $user->user_type);
                 $request->session()->put('user_contact_number', $user->contact_number);
                 $request->session()->put('user_address', $user->address);
                 $request->session()->put('user_password', $user->password);
 
-                if(Hash::check($request->password, $user->password)){
+                if(Hash::check($request->password, $user->password) && $user->contact_number == $request->contact_number){
                    
                     if($user->user_type == 1){
                         return redirect()->route('admin.dashboard')->with([
@@ -101,8 +130,33 @@ class LoginController extends Controller
 
     //==================Register from======================
     public function registration(){
+        $all_apply_count = User::where('user_type', 2)
+                                ->where('activeStatus',1)
+                                ->count('id');
 
-        return view('authenticate.register-from');
+        $info_verify = User::where('info_verify', 1)
+                            ->where('user_type',2)
+                            ->where('activeStatus',1)
+                            ->count('id');
+
+        $loan_verify = User::where('loan_verify', 1)
+                            ->where('user_type',2)
+                            ->where('activeStatus',1)
+                            ->count('id');
+
+        $delivery_loan = User::where('delivery_loan',1)
+                            ->where('user_type',2)
+                            ->where('activeStatus',1)
+                            ->count('id');
+
+        $total_delivery_loan = User::where('info_verify', 1)
+                                    ->where('loan_verify', 1)
+                                    ->where('delivery_loan',1)
+                                    ->where('user_type',2)
+                                    ->where('activeStatus',1)
+                                    ->count('id');
+
+        return view('authenticate.register-from', compact('all_apply_count', 'info_verify', 'loan_verify', 'delivery_loan', 'total_delivery_loan'));
     }
 
     public function postRegistration(Request $request){

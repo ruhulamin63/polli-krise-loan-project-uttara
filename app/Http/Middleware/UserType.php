@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Session;
 
 class UserType
 {
@@ -16,7 +17,7 @@ class UserType
      */
     public function handle(Request $request, Closure $next)
     {
-        if(($request->session()->get('user_type') == 2) || ($request->session()->get('user_type') == 1)){
+        if(($request->session()->get('type') == 2) || ($request->session()->get('type') == 1)){
             return $next($request);
         }else{
             $request->session()->flash('message', 'Invalid Request');

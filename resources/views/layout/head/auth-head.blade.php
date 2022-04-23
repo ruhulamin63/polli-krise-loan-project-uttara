@@ -28,11 +28,11 @@
                 <div class="col-lg-12 col-md-12 clearfix">
                     <div class="hader-top">
                         <ul>
-                            <li><strong>১০৯২</strong><span style="margin-left: 10px;">ঋণ আবেদন</span></li>
-                            <li><strong>৯৩৩</strong><span style="margin-left: 10px;">যাচাইকৃত ঋণ</span></li>
-                            <li><strong>৯২৮</strong><span style="margin-left: 10px;">অনুমোদিত ঋণ</span></li>
-                            <li><strong>৮৮৫</strong><span style="margin-left: 10px;">বিতরনকৃত ঋণ</span></li>
-                            <li><strong> ৮৪৯২</strong><span style="margin-left: 10px;">নিবন্ধিত মোট কৃষক</span></li>
+                            <li><strong>{{$all_apply_count}}</strong><span style="margin-left: 10px;">ঋণ আবেদন</span></li>
+                            <li><strong>{{$info_verify}}</strong><span style="margin-left: 10px;">যাচাইকৃত ঋণ</span></li>
+                            <li><strong>{{$loan_verify}}</strong><span style="margin-left: 10px;">অনুমোদিত ঋণ</span></li>
+                            <li><strong>{{$delivery_loan}}</strong><span style="margin-left: 10px;">বিতরনকৃত ঋণ</span></li>
+                            <li><strong> {{$total_delivery_loan}}</strong><span style="margin-left: 10px;">নিবন্ধিত মোট কৃষক</span></li>
                         </ul>
                     </div>
                 </div>

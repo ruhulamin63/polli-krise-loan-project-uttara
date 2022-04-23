@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('father_name',191)->nullable();
             $table->string('mother_name', 191)->nullable();
             $table->string('address', 191)->nullable();
-            $table->string('contact_number', 191)->unique()->nullable();
+            $table->string('contact_number', 191)->nullable();
             $table->string('password', 191)->nullable();
 
             $table->text('image', 255)->nullable();
@@ -37,6 +37,7 @@ class CreateUsersTable extends Migration
             
             $table->integer('info_verify')->nullable()->comment = '0.in_active 1.active';
             $table->integer('loan_verify')->nullable()->comment = '0.in_active 1.active';
+            $table->integer('delivery_loan')->nullable()->comment = '0.in_active 1.active';
             
             $table->timestamp('otp_verified_at')->nullable();
             $table->rememberToken();
