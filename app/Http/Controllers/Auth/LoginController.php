@@ -266,16 +266,28 @@ class LoginController extends Controller
                 "textBody"=> "আপনার আবাদেনটি সফলভাবে গ্রহণ করা হয়েছে । আবেদনটি অনুমোদনের জন্য অনুগ্রহ করে অপেক্ষা করুন ।"
             ];
     
-            $ch = curl_init();
+
+            $ch= curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($sms));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+            // $response = curl_exec($ch);
+            // echo "$response";
+            // curl_close($ch);
+            
             $response = curl_exec($ch);
-            echo "$response";
+            $err = curl_error($ch);
+            
             curl_close($ch);
+            
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+              print_r(json_decode($response));
+            }
     
        
 

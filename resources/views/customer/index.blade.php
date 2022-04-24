@@ -82,8 +82,7 @@
             </div>
               <div class="abedoner_text calculator  bgg">
                 <div class="main-calculator">
-                  {{-- <form id="myForm"> --}}
-                    {{-- @csrf --}}
+                  {{-- <form> --}}
 
                     <div class="input-group1">
                       <label for="#">আপনার কত টাকা প্রয়োজন?</label>
@@ -92,26 +91,26 @@
                        <label class="control-label text-left">টাকা</label>
                       </div>
                     </div>
-                   <div class="input-group1">
-                    <label for="#">কয় মাসে পরিশোধ করতে চান?</label>
-                    <div class="input-group align-items-center">
-                     <input class="form-control"  type="number" name="month"  id="loan_month" placeholder="Month" maxlength="3" name="txttenor">
-                     <label class="control-label text-left">মাস</label>
+                    <div class="input-group1">
+                      <label for="#">কয় মাসে পরিশোধ করতে চান?</label>
+                      <div class="input-group align-items-center">
+                      <input class="form-control"  type="number" name="month"  id="loan_month" placeholder="Month" maxlength="3" name="txttenor">
+                      <label class="control-label text-left">মাস</label>
+                      </div>
                     </div>
-                   </div>
   
-                   <div class="input-group1">
-                    <label for="#">সুদের হার</label>
-                    <div class="input-group align-items-center">
-                      <input class="form-control"  type="number" name="interest" id="loan_interest" placeholder="Interest Rate" maxlength="4" name="txtIR">
-                      <label class="control-label text-left">%</label>
-                     </div>
-                   </div>
+                    <div class="input-group1">
+                      <label for="#">সুদের হার</label>
+                      <div class="input-group align-items-center">
+                        <input class="form-control"  type="number" name="interest" id="loan_interest" placeholder="Interest Rate" maxlength="4" name="txtIR">
+                        <label class="control-label text-left">%</label>
+                      </div>
+                    </div>
                   
-                   <div class="input-group align-items-center mb-4 mt-4">
-                      <button type="submit" id="interest-calculate" name="btncalc" class="btn btn-primary">ক্যালকুলেশন</button>
-                      <button type="reset" onClick = "fun()" class="btn btn-danger">রিসেট</button>
-                   </div>
+                    <div class="input-group align-items-center mb-4 mt-4">
+                        <button id="interest-calculate" class="btn btn-primary">ক্যালকুলেশন</button>
+                        <button type="reset" class="btn btn-danger">রিসেট</button>
+                    </div>
                     
                     <div class="input-group1">
                       <label for="#">মাসিক কিস্তির পরিমাণ</label>
@@ -121,7 +120,6 @@
                       </div>
                     </div>
                   {{-- </form> --}}
-                  
                 </div>
               </div>
             </div>

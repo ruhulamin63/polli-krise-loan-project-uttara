@@ -21,12 +21,13 @@
                 
             });
 
-            function fun(){  
-                document.getElementById("myForm").reset();  
-            }   
-                                
-
-            
+            // $('.clear').click(function(){ 
+            //     document.getElementById("loan_month").reset();  
+            //     document.getElementById("loan_amount").reset();  
+            //     document.getElementById("loan_interest").reset();  
+            //     document.getElementById("monthly_pay").reset();  
+            // }   
+                        
 
         });
     
