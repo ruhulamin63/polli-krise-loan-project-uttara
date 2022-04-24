@@ -3,32 +3,21 @@
 
         $(document).ready(function(){
     
-            //const modal = document.querySelector('#interest-calculate');
-    
-            
-            // var price_for_five_year = document.getElementById("p_five").innerText;
-            // var price_for_ten_year = document.getElementById("p_ten").innerText;
-            //console.log(span_Text)
-           
-            
-
             $('#interest-calculate').click(function(){
                 //alert('test')
 
-                const principle_amount = $("input[name='principle']").val();
-                const month_amount = $("input[name='month']").val();           
-                const interest_amount = $("input[name='interest']").val(); 
+                var principle_amount = parseInt($("input[name='principle']").val());
+                var month_amount = parseInt($("input[name='month']").val());           
+                var interest_amount = parseInt($("input[name='interest']").val()); 
 
-                //console.log(principle)
-
-                var percent = (parseFloat(principle_amount*(interest_amount/100)*1));
-                console.log(percent)
-                let total_price = int(principle_amount) + int(percent);
-                console.log(total_price)
+                
+                var percent = parseInt((principle_amount*interest_amount*(month_amount/12))/100);
+                //console.log(percent)
+                var total_price = parseInt(principle_amount + percent);
+               
                 var per_month = (total_price / month_amount);
-                //console.log(per_month)
                 //document.getElementById("monthly_pay").innerText=parseFloat(per_month).toFixed(2);
-                document.getElementById("monthly_pay").value = per_month;
+                document.getElementById("monthly_pay").value = parseInt(per_month);
                 
             });
 

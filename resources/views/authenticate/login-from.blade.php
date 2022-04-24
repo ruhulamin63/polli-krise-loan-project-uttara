@@ -23,13 +23,13 @@
                       <div class="input-group-1">
                         <label for="name">মোবাইল নাং দিন</label>
                         <div class="input-group">
-                          <input id="name" type="number" name="contact_number" class="form-control" required>
+                          <input id="name" type="number" name="contact_number" class="form-control" value="{{ old('contact_number')}}" required>
                         </div>
                      </div>
                       <div class="input-group-1">
                         <label for="passwrd">পাসওয়ার্ড</label>
                         <div class="input-group">
-                          <input id="passwrd" type="password" name="password" class="form-control" required>
+                          <input id="passwrd" type="password" name="password" class="form-control" value="{{ old('password')}}" required>
                         </div>
                      </div>
                       <div class="input-group">
