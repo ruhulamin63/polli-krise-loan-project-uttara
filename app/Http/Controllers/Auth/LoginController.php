@@ -83,24 +83,24 @@ class LoginController extends Controller
 
             if($user){
 
-                $request->session()->put('user_id', $user->id);
-                $request->session()->put('user_name', $user->name);
-                $request->session()->put('user_father_name', $user->father_name);
-                $request->session()->put('user_mother_name', $user->mother_name);
-                $request->session()->put('type', $user->user_type);
-                $request->session()->put('user_contact_number', $user->contact_number);
-                $request->session()->put('user_address', $user->address);
-                $request->session()->put('user_password', $user->password);
+                if(Hash::check($request->password, $user->password)){
 
-                if(Hash::check($request->password, $user->password) && $user->contact_number == $request->contact_number){
+                    $request->session()->put('user_id', $user->id);
+                    $request->session()->put('user_name', $user->name);
+                    $request->session()->put('user_father_name', $user->father_name);
+                    $request->session()->put('user_mother_name', $user->mother_name);
+                    $request->session()->put('type', $user->user_type);
+                    $request->session()->put('user_contact_number', $user->contact_number);
+                    $request->session()->put('user_address', $user->address);
+                    $request->session()->put('user_password', $user->password);
                    
-                    if($user->user_type == 1){
+                    if($request->session()->get('type') == 1){
                         return redirect()->route('admin.dashboard')->with([
                             'error' => false,
                             'message', 'Logged In Successfully'
                         ]);
                         
-                    }else if($user->user_type == 2){
+                    }else if($request->session()->get('type') == 2){
                         return redirect()->route('customer.dashboard')->with([
                             'error' => false,
                             'message', 'Logged In Successfully'

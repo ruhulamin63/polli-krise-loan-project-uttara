@@ -29,13 +29,13 @@ use App\Http\Controllers\IndexController;
     // Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 
-    Route::get('registration', [LoginController::class, 'registration'])->name('register');
-    Route::post('post-registration', [LoginController::class, 'postRegistration'])->name('register.post'); 
+    Route::get('/registration', [LoginController::class, 'registration'])->name('register');
+    Route::post('/post-registration', [LoginController::class, 'postRegistration'])->name('register.post'); 
 
-    Route::get('login', [LoginController::class, 'login_index'])->name('login');
-    Route::post('post-login', [LoginController::class, 'postLogin'])->name('login.post'); 
+    Route::get('/login', [LoginController::class, 'login_index'])->name('login');
+    Route::post('/post-login', [LoginController::class, 'postLogin'])->name('login.post'); 
 
-    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
@@ -53,7 +53,7 @@ use App\Http\Controllers\IndexController;
 Route::group(['middleware'=>['sessionVerify']] , function(){
     Route::group(['middleware'=>['userType']] , function(){
         //dd('test');
-        Route::get('customer-dashboard', [CustomerController::class, 'customer_dashboard'])->name('customer.dashboard');
+        Route::get('/customer-dashboard', [CustomerController::class, 'customer_dashboard'])->name('customer.dashboard');
 
     });
 });
