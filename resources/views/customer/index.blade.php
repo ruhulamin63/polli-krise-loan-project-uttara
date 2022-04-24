@@ -82,7 +82,7 @@
             </div>
               <div class="abedoner_text calculator  bgg">
                 <div class="main-calculator">
-                  {{-- <form> --}}
+                  <form>
 
                     <div class="input-group1">
                       <label for="#">আপনার কত টাকা প্রয়োজন?</label>
@@ -91,6 +91,7 @@
                        <label class="control-label text-left">টাকা</label>
                       </div>
                     </div>
+
                     <div class="input-group1">
                       <label for="#">কয় মাসে পরিশোধ করতে চান?</label>
                       <div class="input-group align-items-center">
@@ -108,8 +109,9 @@
                     </div>
                   
                     <div class="input-group align-items-center mb-4 mt-4">
-                        <button id="interest-calculate" class="btn btn-primary">ক্যালকুলেশন</button>
-                        <button type="reset" class="btn btn-danger">রিসেট</button>
+                        <input id="interest-calculate" class="btn btn-primary" value="ক্যালকুলেশন" />
+                        {{-- <span onclick="fun()" class="btn btn-danger">রিসেট</span> --}}
+                        <input type="reset" class="btn btn-danger" value="রিসেট" />
                     </div>
                     
                     <div class="input-group1">
@@ -119,7 +121,7 @@
                         <label class="control-label text-left">টাকা</label>
                       </div>
                     </div>
-                  {{-- </form> --}}
+                  </form>
                 </div>
               </div>
             </div>
