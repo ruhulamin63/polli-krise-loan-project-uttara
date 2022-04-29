@@ -245,7 +245,6 @@ class LoginController extends Controller
         $data['activeStatus'] = 1;
         $data['loan_verify'] = 0;
         $data['info_verify'] = 0;
-        $data['user_type'] = 2;
 
         $query = DB::table('users')->insert($data);
 
